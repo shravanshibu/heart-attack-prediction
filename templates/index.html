@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Salary API</title>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Heart Attack Analysis</h1>
+        <form action="{{url_for('predict')}}" method="post">
+
+            <Label>Age : <input type="text" name="age" placeholder="Age" required="required" /></Label><br><br>
+            <Label>Sex : 
+                <select id="sex" name="sex">
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select>
+            </Label><br><br>
+            <label>Chest Pain type chest pain type : 
+                        <select id="chestp" name="chestp">
+                            <option value="1">Typical Angina</option>
+                            <option value="2">Atypical Angina</option>
+                            <option value="3">Non-anginal pain</option>
+                            <option value="4">Asymptomatic</option>
+                        </select></label><br><br>
+            <label>Blood Pressure: <input type="text" name="trtbps" placeholder="Blood Pressure" required="required" /></label><br><br>
+            <label>Cholestoral(mg/dl):<input type="text" name="chol" placeholder="Cholestoral" required="required" /></label><br><br>
+            <label>Fasting Blood Sugar > 120 mg/dl or not : 
+                        <select id="fbs" name="fbs">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select></label><br><br>
+            <label>ECG
+                <select id="ecg" name="ecg">
+                    <option value="1">Normal</option>
+                    <option value="2">ST-T wave Abnormality </option>
+                    <option value="3">Left ventricular hypertrophy </option>
+                </select></label><br><br>
+
+            <label>Maximum heart rate achieved: <input type="text" name="thalachh" placeholder="Maximum heart rate" required="required" /></label><br><br>
+            <label>Exng: <input type="text" name="exng" placeholder="0,1,2,3,4" required="required" /></label><br><br>
+            <label>Old Peak: <input type="text" name="oldpeak" placeholder="Float" required="required" /></label><br><br>
+            <label>SLP: <input type="text" name="slp" placeholder="0,1,2" required="required" /></label><br><br>
+            <label>CAA: <input type="text" name="caa" placeholder="0,1,2,3" required="required" /></label><br><br>
+            <label>THALL: <input type="text" name="thall" placeholder="0,1,2,3" required="required" /></label><br><br>
+           
+            <button type="submit" class="btn btn-primary btn-dark" data-toggle="modal" data-target="myModal">Check</button><br>
+       </form>
+
+    <br>
+    <br>
+
+       <div>
+           <br>
+
+            <h1>{{prediction_text}}</h1>
+
+           <br>
+           <br>
+
+       </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+</body>
+</html>
