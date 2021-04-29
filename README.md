@@ -32,3 +32,5 @@ target : 0 = less chance of heart attack 1 = more chance of heart attack
 Objective:
 
 With the dataset provided for heart analysis, we have to analyse the possibilities of heart attack on the basis of various features, and then the prediction from the analysis will tell us that whether an individual is prone to heart attack or not. The detailed analysis can proceed with the exploratory data analysis (EDA).
+
+App link:-  https://heart-attack-predictor1.herokuapp.com
